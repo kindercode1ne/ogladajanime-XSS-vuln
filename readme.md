@@ -48,4 +48,3 @@ All my full payloads are in [`payloads`](./payloads/payloads.txt).
 
     Payload list & links: see payloads.txt
     Room‑creation XSS proof: https://imgur.com/a/sxjHl5B
-```
