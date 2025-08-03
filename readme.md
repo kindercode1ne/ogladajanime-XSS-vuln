@@ -1,8 +1,5 @@
 # Vulnerability Report: ogladajanime.pl
 
-> A quick write‑up of the security holes I found on ogladajanime.pl (≈ 80 000 users)  
-> by [kindercode1ne](https://github.com/kindercode1ne) · July 2025
-
 ---
 
 ## 🚀 Project & Scope
@@ -33,7 +30,7 @@
 ### 2. Fake‑Login Cookie Grabber
 
 - **What:** Crafted a modal that looks like real login, steals creds + cookies to my Vercel webhook
-- **Where:** user‑profile “delete account” flow (no email check)
+- **Where:** watch togheter section
 - **Proof:** see payload in [`payloads`](./payloads/payloads.txt)
 
 ---
@@ -48,3 +45,4 @@ All my full payloads are in [`payloads`](./payloads/payloads.txt).
 
     Payload list & links: see payloads.txt
     Room‑creation XSS proof: https://imgur.com/a/sxjHl5B
+
